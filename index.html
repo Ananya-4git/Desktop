@@ -2,22 +2,27 @@
 <html>
 <head>
     <title>Ananya - Portfolio</title>
-    <link rel="stylesheet" href="ananya.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <h2>Ananya</h2>
 
-        <nav>
+        <button id="menu-btn">☰</button>
+
+        <nav id="nav-menu">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
+
+        <button id="theme-btn">🌙</button>
     </header>
 
-    <section id="home">
+    <section id="home" class="animate">
         <div>
             <h1>Hello, I'm Ananya</h1>
             <h2>BCA Student & Aspiring Developer</h2>
@@ -27,7 +32,7 @@
         <img src="profile.jpg" alt="Profile Image">
     </section>
 
-    <section id="about">
+    <section id="about" class="animate">
         <h2>About Me</h2>
         <p>
             I am a BCA student interested in programming and web development.
@@ -35,7 +40,7 @@
         </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="animate">
         <h2>My Skills</h2>
         <p>HTML</p>
         <p>CSS</p>
@@ -44,10 +49,25 @@
         <p>SQL</p>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="animate">
         <h2>Contact Me</h2>
-        <p>Email: your-email@example.com</p>
+
+        <form id="contact-form">
+
+            <input type="text" id="name" placeholder="Your Name">
+
+            <input type="email" id="email" placeholder="Your Email">
+
+            <textarea id="message" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+            <p id="form-message"></p>
+
+        </form>
     </section>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
