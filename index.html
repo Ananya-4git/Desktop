@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ananya - Portfolio</title>
-    <link rel="stylesheet" href="ananya.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ananya | Portfolio</title>
+
+    <link rel="stylesheet" href="Ananya.css">
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
-        <h2>Ananya</h2>
+        <div class="logo">Ananya</div>
 
         <button id="menu-btn">☰</button>
 
@@ -22,43 +27,103 @@
         <button id="theme-btn">🌙</button>
     </header>
 
-    <section id="home" class="animate">
-        <div>
-            <h1>Hello, I'm Ananya</h1>
-            <h2>BCA Student & Aspiring Developer</h2>
-            <p>I am learning programming and web development.</p>
-        </div>
 
-        <img src="profile.jpg" alt="Profile Image">
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm Ananya</h1>
+
+            <h2>Welcome to My Portfolio</h2>
+
+            <p>
+                I am a BCA student passionate about programming,
+                web development and technology.
+            </p>
+
+            <a href="#about" class="btn">Explore My Portfolio</a>
+        </div>
     </section>
 
-    <section id="about" class="animate">
+
+    <!-- About Section -->
+    <section id="about" class="section">
         <h2>About Me</h2>
+
         <p>
-            I am a BCA student interested in programming and web development.
-            I enjoy learning new technologies and building projects.
+            Hello! My name is Ananya. I am a BCA student interested
+            in programming and web development.
+        </p>
+
+        <p>
+            I am learning HTML, CSS, JavaScript, Python, Java and SQL.
+            My goal is to become a skilled programmer.
         </p>
     </section>
 
-    <section id="skills" class="animate">
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
         <h2>My Skills</h2>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>Python</p>
-        <p>Java</p>
-        <p>SQL</p>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <p>Creating website structure.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <p>Designing attractive websites.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Adding interactive features.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Learning programming and problem solving.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Java</h3>
+                <p>Learning object-oriented programming.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>SQL</h3>
+                <p>Working with databases.</p>
+            </div>
+
+        </div>
     </section>
 
-    <section id="contact" class="animate">
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
         <h2>Contact Me</h2>
 
         <form id="contact-form">
 
-            <input type="text" id="name" placeholder="Your Name">
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+            >
 
-            <input type="email" id="email" placeholder="Your Email">
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+            >
 
-            <textarea id="message" placeholder="Your Message"></textarea>
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                rows="5"
+            ></textarea>
 
             <button type="submit">Send Message</button>
 
@@ -67,6 +132,14 @@
         </form>
     </section>
 
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Ananya. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>

@@ -7,6 +7,16 @@ menuBtn.addEventListener("click", function () {
 });
 
 
+// Close menu when a navigation link is clicked
+const navLinks = document.querySelectorAll("#nav-menu a");
+
+navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+    });
+});
+
+
 // Dark / Light Mode
 const themeBtn = document.getElementById("theme-btn");
 
@@ -21,47 +31,11 @@ themeBtn.addEventListener("click", function () {
 });
 
 
-// Smooth Scrolling
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-        const target = document.querySelector(link.getAttribute("href"));
-
-        target.scrollIntoView({
-            behavior: "smooth"
-        });
-
-        navMenu.classList.remove("active");
-    });
-});
-
-
-// Scroll Animation
-const sections = document.querySelectorAll(".animate");
-
-const observer = new IntersectionObserver(function (entries) {
-
-    entries.forEach(function (entry) {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-
-    });
-
-});
-
-sections.forEach(function (section) {
-    observer.observe(section);
-});
-
-
 // Contact Form Validation
-const form = document.getElementById("contact-form");
+const contactForm = document.getElementById("contact-form");
 const formMessage = document.getElementById("form-message");
 
-form.addEventListener("submit", function (event) {
+contactForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -70,18 +44,32 @@ form.addEventListener("submit", function (event) {
     const message = document.getElementById("message").value.trim();
 
     if (name === "" || email === "" || message === "") {
-
         formMessage.textContent = "Please fill in all fields.";
-
-    } else if (!email.includes("@")) {
-
-        formMessage.textContent = "Please enter a valid email.";
-
-    } else {
-
-        formMessage.textContent = "Message sent successfully!";
-
-        form.reset();
+        return;
     }
 
+    if (!email.includes("@")) {
+        formMessage.textContent = "Please enter a valid email.";
+        return;
+    }
+
+    formMessage.textContent = "Message sent successfully!";
+
+    contactForm.reset();
+});
+
+
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+        event.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
 });
