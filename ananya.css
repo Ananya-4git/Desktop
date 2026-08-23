@@ -286,3 +286,26 @@ form.addEventListener("submit", function (event) {
     }
 
 });
+/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode header {
+    background: #1f1f1f;
+}
+
+body.dark-mode a {
+    color: #ffffff;
+}
+
+body.dark-mode section {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode button {
+    background: #333;
+    color: white;
+}
