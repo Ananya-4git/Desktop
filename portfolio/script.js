@@ -34,3 +34,41 @@ contactForm.addEventListener("submit", function (event) {
     contactForm.reset();
 
 });
+// DARK / LIGHT MODE
+
+const themeBtn = document.getElementById("theme-btn");
+
+themeBtn.addEventListener("click", function () {
+
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        themeBtn.textContent = "☀️";
+    } else {
+        themeBtn.textContent = "🌙";
+    }
+
+});
+// SCROLL ANIMATION
+
+const revealElements = document.querySelectorAll(
+    ".section, .hero-content, .hero-image"
+);
+
+function revealOnScroll() {
+
+    revealElements.forEach(function (element) {
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            element.classList.add("reveal", "show");
+        }
+
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
