@@ -52,7 +52,7 @@ themeBtn.addEventListener("click", function () {
 // SCROLL ANIMATION
 
 const revealElements = document.querySelectorAll(
-    ".section, .hero-content, .hero-image"
+    ".section, .hero-content, .hero-image, .project-card, .education-card, .resume-card"
 );
 
 function revealOnScroll() {
