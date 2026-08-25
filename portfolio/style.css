@@ -819,3 +819,38 @@ body.light-mode .project-icon {
     }
 
 }
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
